@@ -1,0 +1,17 @@
+#Exercise 1
+
+varString = "String"
+varInteger = 15
+varFloat = 25.5
+varBoolean = True
+
+print(varString)
+print(varInteger)
+print(varFloat)
+print(varBoolean)
+
+#Exercise 2
+
+C = 25
+F = (C * 9/5) + 32
+print(F)
