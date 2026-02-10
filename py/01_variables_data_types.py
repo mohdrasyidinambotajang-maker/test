@@ -1,30 +1,44 @@
-name = "Bob" #String
-age = 10     # Integer
-weight = 20.5 # Float
-is_female = False # Boolean
-her_name = "Alice" #String
-random_number = None # Integer
-tapir = "animal"
-
+name = "Rasyidin" # string data type
+age = 31 # integer data type
+weight = 55.66 # float data type
+is_student = False # boolean data type
 
 print(name)
+print(weight)
 print(type(name))
-print(her_name)
-print(type(random_number))
-
+print(type(age))
+print(type(weight))
+print(type(is_student))
 
 x = 10
 y = 3
 
+print(x + y) # addition
+print(x - y) # subtraction
+print(x * y) # multiplication
+print(x / y) # division
+print(x // y) # floor division
+print(x % y) # modulus
+print(x ** y) # exponentiation
 
+#exercise 1
+#create variables consisting of different data types and print their values and types
+class_name = "Python Bootcamp"
+number_of_students = 35
+python_version = 3.13
+is_enrolled = True
 
-print(x + y)  # Addition
-print(x - y)  # Subtraction
-print(x * y)  # Multiplication
-print(x / y)  # Division
-print(x // y) # Floor Division
-print(x % y)  # Modulus
-print(x ** y) # Exponentiationprint(type(a
+print(class_name)
+print(number_of_students)
+print(python_version)
+print(is_enrolled)
+print(type(class_name))
+print(type(number_of_students))
+print(type(python_version))
+print(type(is_enrolled))
 
-
-
+#exercise 2
+#convert Celsius to Fahrenheit
+celsius = 25
+fahrenheit = (celsius * 9/5) + 32
+print(fahrenheit)

@@ -1,0 +1,62 @@
+# Basic exception handling
+try:
+    number = int(input("Enter a integer number: "))
+    result = 10/number
+    print(f"Result: {result}")
+except ValueError:
+    print("Invalid input! enter integer number")
+except ZeroDivisionError:
+    print("Cannot divide by 0")
+
+# Raising exceptions
+def validate_age(age):
+    if age < 1:
+        raise ValueError("Your are not born yet")
+    if age > 150:
+        raise ValueError("Are you ghost?")
+    return True
+
+
+try:
+    age = int(input("Enter your age: "))
+    validate_age(age)
+except ValueError as e:
+    print(f"Validation error: {e}")
+
+
+# Classes and Object
+class Character:
+    def __init__(self, name, health, attack_power):
+        self.name = name
+        self.current_health = health
+        self.max_health = health
+        self.attack_power = attack_power
+
+    def attack(self, enemy):
+        enemy.current_health -= self.attack_power
+        if enemy.current_health < 0:
+            enemy.current_health = 0
+        return f"{self.name} attacks {enemy.name} for {self.attack_power} damage!"
+
+    def heal(self, amount):
+        if (amount + self.current_health) >= self.max_health:
+            amount = self.max_health - self.current_health
+            self.current_health = self.max_health
+            return f"{self.name} has been healed for {amount} health. Current health is {self.current_health}"
+        else:
+            self.current_health += amount
+            return f"{self.name} has been healed for {amount} health. Current health is {self.current_health}"
+        
+    def status(self):
+        return f"{self.name}:\n{self.current_health}/{self.max_health} HP\n{self.attack_power} AP"
+    
+
+hero = Character("Hero", 100, 20)
+monster = Character("Monster", 50, 15)
+
+print(hero.attack(monster))
+print(monster.status())
+print(monster.attack(hero))
+print(hero.status())
+print(hero.heal(30))
+print(hero.status())

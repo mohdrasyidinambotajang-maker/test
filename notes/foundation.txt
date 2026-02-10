@@ -1,0 +1,88 @@
+how to open terminal
+ctrl + ~
+
+how to disable code
+ctrl + /
+
+to enter folder eg py
+cd py
+
+to back folder
+cd ..
+
+to break out of loop in terminal
+ctrl + c
+
+install git for terminal (windows)
+https://git-scm.com/install/windows
+
+python code referer if not clear
+https://www.w3schools.com/python/
+
+to update repo
+git add .
+git commit -m "your_comment"
+git push
+
+to create and activate virtual environment
+1.Create virtual environment : python -m venv myvenv
+2.Activate virtual environment: myvenv\Scripts\activate
+
+this to bypass policy if cannot activate
+Set-ExecutionPolicy -Scope Process -ExecutionPolicy Bypass
+
+bypass forever, execute in powershell
+Set-ExecutionPolicy -Scope CurrentUser -ExecutionPolicy RemoteSigned
+
+
+example data type
+name = "Asyraf" # string data type
+age = 31 # integer data type
+weight = 55.66 # float data type
+is_student = False # boolean data type
+
+to check data type
+print(type(name))
+print(type(is_student))
+
+example operation
+print(x + y) # addition
+print(x - y) # subtraction
+print(x * y) # multiplication
+print(x / y) # division
+print(x // y) # floor division
+print(x % y) # modulus
+print(x ** y) # exponentiation
+
+triple quote for string many line
+triple_quote = """Multi-line
+string"""
+
+manipulated string
+select certain character in string
+print(test_word[0])      #first character
+print(test_word[-1])     #last character
+print(test_word[0:6])    #from start to 6th character
+print(test_word[:6])     #from start to 6th character too
+print(test_word[7:])     #from 8th charater to finish
+
+print(len(test_word))                   #find length string
+print(test_word.strip())                #remove space
+print(test_word.upper())                #UPPERCASE string
+print(test_word.lower())                #lower string
+print(test_word.title())                #only first each sentence big letter
+print(test_word.replace("2026", "C5"))  #replace specific string
+print(test_word.split())                #split into list
+print(test_word.split()[1])             #split and print selected index
+print(len(test_word.split()))           #count total word (detect by space)
+print(test_word.count("-"))             #count symbol/character in bracket
+
+coding = "Python"
+no_student = 35
+
+msg_1 = f"Class today: {coding}, Student: {no_student}"             #f-string method
+msg_2 = "Class today: {}, Student: {}".format(coding, no_student)   #str.format()
+msg_3 = "Class today: %s, Student: %d" % (coding, no_student)       #%-formatting %s = string, %d = decimal, %f = float, %g = general
+
+for print limit float decimal place
+{example:.3f}
